@@ -1,0 +1,735 @@
+    /* Global elements 
+    */
+    
+    /* .palegrey {
+        background-color: gainsboro;
+    }
+    
+    .grayside {
+        background-color:#BEB6B0;
+    }
+    */
+    :root{
+        --color_green : #009789;
+        --color_green-dark : #144244;
+        --color_red :  #E84141;
+        --color_red-dark: #b55b47;
+        --color_grey : #777;
+        --color_grey-pale : #CECECE;
+        --color_grey-dark: #292929;
+        --color_orange-pale : #f0863c;
+        --color_dark-blue : #343a40;
+        --transparent_grey : rgba(255, 255, 255, 0.5);
+        --color_blue-dark : #354046;
+        --color_white-false : #f8f9fa;
+        --color_jaune-pale : #FCCD49;
+        --color_mint :#33552e;
+        --CardAcceuil_color-gradient1 : #bb191b6b;
+        --CardAcceuil_color-gradient2 : #1f422470;
+
+        --font-family_main : 'futura', 'Arial Narrow', Arial, sans-serif;    
+    }
+
+    .strongGray {
+        background-color: var(--color_grey);
+    }
+     
+    /* acceuil film contact*/
+    .green {
+        background-color: var(--color_green);
+    }
+
+    .linkHome {
+        color :var(--color_grey);
+        font-size: 14px;
+    }
+    
+    .mention, .reserve, .linkHome:hover {
+        color: var(--color_green);
+    }
+    a:hover {
+        color: var(--color_green);
+        transition: ease-in 200ms;
+    }
+    .tous:hover, .contact:hover, #dropdownMenuButton:hover, .reserve:hover{
+        color: var(--color_red);
+    }
+    
+    /* A conserver sinon header ne prend pas en compte le font-family */
+    body {
+        font-family: var(--font-family_main);
+        color: var(--color_dark-blue); 
+        background: var(--color_white);
+        /* color: var(--color_white);
+        background: var(--color_green-dark); */
+    }
+    
+    /*HEADER & FOOTER*/
+    header {
+        font-family: var(--font-family_main);
+        margin-bottom: 6rem !important;
+    }
+    .navbar-brand {
+        color: var(--color_red-dark) !important;
+        /* color: var(--color_red) !important; */
+    }
+    .navbar-brand:hover {
+        color: var(--color_green) !important;
+    }
+
+    #dropdownMenuButton, .contact{
+        margin-right: 150px;
+        border: var(--color_green) 2px solid;
+        color: var(--transparent_grey);
+    }
+    .dropdown-menu {
+        font-size: 2rem;
+       background-color: var(--color_jaune-pale);
+        
+    }
+    .dropdown-item {
+        color :var(--color_grey);
+        font-size: 18px;
+    }
+    .unique:hover {
+        color:var(--color_green);
+        background-color: rgba(192, 189, 189, 0.2);
+    }
+
+    footer {
+        color: var(--color_grey-pale);
+        background-color: var(--color_grey-dark);
+        border-top: solid 10px var(--color_red);
+    }
+    .contact {
+        padding :0.5rem !important;
+    }
+    
+    .nav-item {
+        justify-content: center !important;
+        display: flex !important;
+    }
+    
+    .nav>li>a:focus {
+        text-decoration: none;
+        background-color: transparent;
+
+    }
+    .btn:focus {
+        outline: 0;
+        box-shadow: 0 0 0 .2rem var(--color_grey);
+    }    
+    
+    /*MENUS*/
+    .btn-navbar {
+        padding: 5px 20px;
+        font-size: 22px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        color: var(--color_white);
+        position: relative;
+        display: inline-block;
+        text-decoration: none !important;
+        text-align: center;
+        word-break: break-word;
+    }
+    .btn-navbar:hover {
+        color :var(--color_green);
+    }
+    
+    .btn-navbar:active {
+        transform: translate(0px, 5px);
+        -webkit-transform: translate(0px, 5px);
+        box-shadow: 0px 1px 0px 0px;
+    }
+    /*fin MENUS*/
+
+    
+    /*TITRES*/
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: var(--font-family_main);
+        font-weight: bold;
+        font-size: 7vw;
+        margin: 1em;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: var(--font-family_main);
+        font-style: italic;
+    }
+    section > h2 {
+        text-decoration: underline var(--color_red) 4px;
+        text-transform: uppercase;
+    }
+
+    h3{
+        text-align: center;       
+        font-family: var(--font-family_main);
+        margin-bottom: 2vh;
+    }
+    /*FIN TITRES*/
+    
+    /*CARD */
+    .card-body {
+        color: var(--color_grey);
+        font-family: var(--font-family_main);
+    }
+    .card-body > a {
+        color: var(--color_grey);
+    }
+    .card-body > a:hover {
+        text-decoration-line: none;
+        color: var(--color_green);
+    } 
+
+    .card-deck .card-title {
+        text-transform: uppercase;
+    }
+    .card-title {
+        font-size: 3vw;  
+        text-decoration: underline var(--color_red) 4px !important;
+        margin-bottom: 3.75rem;
+        -webkit-text-decoration-line: underline;
+        -webkit-text-decoration-color: var(--color_red);
+        text-decoration-thickness: 4px;
+        text-underline-offset: 4px;
+        text-decoration-color: var(--color_red);
+        text-decoration-line: underline;
+    }
+    .card-text {
+        font-size: 22px;
+        font-style: italic;
+    }
+
+    /*fin CARD*/
+
+    li {
+        list-style-type: none;
+    }
+    
+    /* HERO */
+
+    .presentation, section {
+        padding: 20px;
+    }
+
+    .hero3{
+        background-image: url('../../assets/img/films/blow_up_0_resized.jpeg');
+        width: 500px;
+        background-repeat: no-repeat;
+    }
+    .hero4{
+        background-image: url('../../assets/img/films/Blow-up1.jpg');
+        width: 500px;
+        background-repeat: no-repeat;
+    }
+
+/* fin HERO */
+
+.programmationTitle {
+    background-color: var(--color_blue-dark);
+    color:var(--color_white);
+}
+.reservationTitle {
+    background-color: var(--color_red);
+    color:var(--color_white);
+}
+.partenariatTitle {
+    background-color: var(--color_orange-pale);
+    color:var(--color_white);
+}
+.accesTitle {
+    background-color: var(--color_mint
+    );
+    color:var(--color_white);
+}
+
+main > div > h3 {
+    color: var(--color_white);
+}
+
+
+#ClergyCard {
+    background-image: url('../../assets/img/films/coquille&clerg_0affiche.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+#AmourCard {
+    background-image: url('../../assets/img/films/amour_0affiche.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+#HiredCard {
+    background-image: url("../../assets/img/films/hired_affiche.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+#NosferCard {
+    background-image: url("../../assets/img/films/nosferat_0affiche.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+#JellyCard {
+    background-image: url('../../assets/img/films/jelly_affiche.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+#TortueCard {
+    background-image: url('../../assets/img/films/tortue_0affiche.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+#AmourCard:hover, #ClergyCard:hover, #HiredCard:hover, #NosferCard:hover, #JellyCard:hover, #TortueCard:hover {
+    background-blend-mode: normal;
+    transition: 500ms;
+}
+.trouble {
+    opacity: 1;
+}
+.trouble:hover {
+    opacity: 0;
+    transition: 200ms;
+}
+
+.film-article {
+	box-sizing: content-box;
+    display: flex;
+    width: calc(100vw - 71px);
+    margin: 0 0 5rem;
+    padding: 2rem 0;
+  }
+
+.programme-link {
+    color: var(--color_white);
+}
+.programme-link:hover {
+    border: 2px double var(--color_white);
+    border-radius: 6px;
+    padding: 4px;
+    text-transform: uppercase;
+}
+.list-group li {
+    font-size: 1.5rem;
+}
+.header-card {
+    background-image: linear-gradient(0deg,var(--color_grey),var(--color_red));
+    position: relative;
+    border-radius: 16px;
+    padding: 1rem;
+    /* margin: 0 4rem 0 0; */
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 320px;
+    justify-content: center !important;
+}
+.header-card-title {
+    color: var(--color_white);
+    font-size: 4rem;
+}
+.mini-card-grid {
+    scrollbar-color:var(--color_green) var(--color_white)  ;
+    scrollbar-gutter: always;
+    padding: 3rem;
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.mini-card-grid a {
+    color: var(--color_white);
+}
+.mini-card {
+    min-width: 30vh;
+    min-height: 350px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -0.5rem 0 3rem #17141da9;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+}
+
+.mini-card:hover {
+    transform: translateY(-1rem);
+    min-width: 40vh;
+    transition: 500ms;
+    box-shadow: -0.6rem 0 3rem var(--color_green);
+}
+.cardAccueil {
+    /* transform: scale(1); */
+    transition: transform 400ms;
+}
+.cardAccueil:hover {
+    background: linear-gradient(var(--CardAcceuil_color-gradient1), var(--CardAcceuil_color-gradient2));
+    transform: scale(1.05);
+}
+#cnc_logo {
+    width: 30VW;
+}
+#IDF_logo {
+    background-color: var(--color_grey);
+    padding: 10px;
+}
+.title--etape {
+    font-size :2rem;
+}
+
+/*fin ACCUEIL*/
+
+
+/* Liste des Films */
+
+.secondTitle {
+    color: var(--color_green);
+    border-radius: 100px;
+    margin-top: 100px;
+    margin-bottom: 80px;    
+}
+    .card-filmList {
+        height: 100%;
+        /* height: 152vh; */
+    }
+    .card-filmList img {
+        border-radius: 10px;
+        padding: 15px;
+    }
+    .card-filmList h2 {
+        text-decoration: none;
+        font-size: 4rem;
+    }
+    .infoInCard {
+        border: var(--color_grey-pale) solid 2px;
+        padding: 5px;
+    }
+    .infoInCard p {
+        height: 330px; 
+    }
+    #card-text--nosfer {
+        height: 249px;
+    }
+    .card-filmList h3 {
+        font-weight: bold;
+        font-style: normal;
+    }
+    .card-filmList p, .infoInCard p {
+        margin-left: 10px;
+        font-style: normal;
+    }
+
+    .infoInCard a {
+        padding: 10px;
+        font-weight: normal;
+        font-style: italic;
+        font-size: 2.5rem;
+        color: var(--color_white);
+        background-color:var(--color_red);
+        border-radius: 100px;
+        justify-content: center;
+        display: flex;
+        width: 90%;
+        margin: auto;
+        border: none;
+        margin-bottom: 2vh;    
+    }
+    .infoInCard a:hover {
+        background-color: var(--color_green);
+        color: var(--color_white);
+    }
+
+     /* fin  Liste des Films */
+
+    /* Film SELECTION */
+    .affiche {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .note, .valeur {
+        color: var(--color_red);
+    }
+    #annulationSeance {
+        text-transform: uppercase;
+    }
+    .annonce {
+        margin : 10px;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+        background-color: var(--color_red);
+    }
+        /*Selection infos*/
+    .selectionInfo h1 {
+        color:var(--color_white);
+        font-size: 3rem;
+        background-color: var(--color_red);
+        margin: 0;
+        padding: 2px;
+    }
+    .selectionInfo h2 {
+        font-size: 2.5rem;
+        /* text-decoration: none; */
+        font-style: italic;
+    }
+    .selectionInfo .card-text {
+        font-style: normal;
+        margin: 0;
+        font-weight: bold;
+    }
+    .appel {
+        font-size: 2rem;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+        border: double 6px;
+    }
+    .annulation{
+        text-decoration-line: line-through;
+        text-decoration-thickness: 5px;
+        text-decoration-color: black;
+    }
+    .VO_titre {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+    .specification, .specification ul, .specification .surligne {
+        font-size: 20px;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .surligne {
+        height: 4px;
+        border: 0;
+        background-color: var(--color_red);
+        width: 70%;  
+    }
+    .infoFilm {
+            line-height: 42px;
+    }
+/* fin Selection infos*/
+
+/* synopsys & Formulaire de contact*/
+    .synopsis, .contactForm {
+        padding: 20px;
+        color: var(--color_grey);
+    }
+    .icon {
+        margin-bottom: 6px;
+        margin-right:15px;
+    }
+    .synopsis li {
+        font-size: 22px;
+        font-family: var(--font-family_main);
+        color: var(--color_grey);
+        margin: 5px;
+    }    
+    .synopsis h2, .contactForm h2 {
+        color: var(--color_grey);
+        border: 2px solid var(--color_grey);
+        padding: 10px ;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .contactForm h2 {
+        color: var(--color_green);
+        border: 2px solid var(--color_red);
+    }
+    .contactForm input, .contactForm textarea{
+        font-size: 22px;
+        font-family: var(--font-family_main);
+        color: var(--color_grey);
+    }
+    .contactForm input::placeholder, .contactForm textarea::placeholder, .contactForm label {
+        font-size: 15px;
+    }
+    .contactForm label {
+        color: var(--color_red);
+    }
+    #inputUser_message {
+        width: 100% !important;
+        border: #ced4da 1px solid;
+        padding: 10px !important;
+        height: 100px;
+    }
+    .formSubmit {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    .formSubmit:hover{
+        color: var(--color_white);
+    }
+    .formSubmit:active {
+        color: var(--color_white);
+        background-color: var(--color_white);
+        border:var(--color_green) solid 2px ;
+    }
+/* fin Synopsis & Formulaire de contact*/
+
+        .titre_cache {
+            display: none;
+        }
+/* fin Film SELECTION */
+
+/*Media queries selon supports de taille décroissante */
+
+    @media (min-width : 1920px) {
+        .btn-navbar, .card-text {
+            font-size: 30px !important;
+        }
+        .infoInCard a{
+            font-size: 3.5rem;
+        }
+        .specification, .specification h3, .contactForm label, .formSubmit, .contactForm input, .contactForm input::placeholder, .contactForm textarea::placeholder {
+            font-size: 30px;
+        }
+        .contactForm h2 {
+            font-size: 6rem;
+        }
+        #emailHelp {
+            font-size: 20px;
+        } 
+        .titre_cache {
+            display: block
+        }
+        .infoInCard {
+            height: 605px;
+        }
+        .card-filmList p {
+            height: initial;
+        }
+        #btn-resa__amour {
+            margin-top: 7vh
+        }
+        #btn-resa__nosf {
+            margin-top: 11vh
+        }
+        #btn-resa__jelly {
+            margin-top: 10.7vh;
+        }
+        #btn-resa__clergy {
+            margin-top: 11.7vh
+        }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1380px) {   
+        .infoInCard a {
+             width: 100%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .film-article {
+            padding-left: 0;
+            width: 100%;
+            padding-bottom: 2rem;
+            margin-bottom: 6rem;
+            overflow-x: scroll;
+        }
+        .header-card-title {
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .mini-card-grid {
+            overflow-x: visible;
+        }
+        .film-article .mini-card {
+            scroll-snap-align: start;
+        }
+        .mini-card {
+            min-width: 220px;
+        }
+        .mini-card:hover {
+            transform: translateY(-1rem);
+        }
+      }
+
+
+    @media (max-width: 576px) {
+        #navbarMainMenuToggler {
+            margin-top: 5vh;
+        }
+        #navbarMainMenuToggler .nav-pills .nav-item, #navbarMainMenuToggler .nav-pills .nav-item a {
+            width :100%;
+        }
+        .card-title {
+            font-size: 8vw;
+        }
+        .title--etape {
+            font-size :1.5rem;
+        }
+        .selectionInfo h1 {
+            font-size: 4rem;
+        }
+        .appel{
+            font-size: 3rem;
+        }
+        .contactForm h2 {
+            font-size: 8vw;
+            width: 100%;
+        }
+        .synopsis .valeur {
+            font-weight: normal;
+        }
+        .infoInCard p, #card-text--nosfer {
+            height: 440px;
+        }
+        .film-article {
+            overflow: hidden;
+        }
+        .mini-card-grid {
+            scrollbar-gutter :no-button;
+            padding: 0rem;
+            display: inline;
+            overflow-x: none;
+        }
+        .mini-card {
+            margin:20px;
+        }
+        #IDF_logo {
+            width: 90%
+        }
+        .list-group li {
+            font-size: 1rem;
+        }    
+    }
+    @media (max-width: 374px) {
+        .infoInCard a {
+            font-size: 2rem;
+            width: 100%;
+        }
+        .selectionInfo h1 {
+            font-size: 3rem;
+        }
+        .appel {
+            font-size: unset;
+        }
+        .synopsis div p {
+            font-size: 25px;
+        }
+        .contactForm h2 {
+            font-size: 6vw;
+        }
+        
+    }
+
+/* special Safari */
+    .row:before, .row:after {
+        display: none !important;
+    }
