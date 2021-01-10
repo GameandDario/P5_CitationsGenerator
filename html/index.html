@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -13,30 +13,77 @@
 </head>
 
 <body>
-    <h1 class="text-center m-5 text-white">Générateur de citations amusantes</h1>
-    <div class="container">
-        <div class="row">
+    <h1 class="text-center m-5 ff_main">Générateur de citations amusantes
+        <hr>
+    </h1>
+    <div class="container my-5">
+        <h2 class="my-3 ff_main title_underline_dotted">Première étape</h2>
+        <h3 class="my-3">Proposition</h3>
+        <p>A partir d'une instance de classe en JS, je crée plusieurs objets CitationBlocks. <br />Ces objets sont
+            réunis dans un tableau pour chaque type grammatical( un tableau pour les sujets, un autre pour les verbes et
+            un autre pour les compléments, etc...), lequel pourra être parcouru. <br />De chaque tableau créé, j'intégre
+            aléatoirement un élément associé aux autres éléments par concaténation, pour ainsi construire une phrase en
+            appelant la fonction generateCrazZytation() en cliquant sur le bouton "Générer une citation".</p>
+        <div class="row m-4">
             <div class="col">
-                <button class="btn btn-info" onclick="document.getElementById('resultatCitation').innerHTML=generateCrazZytation()">
-                    Générer
+                <button class="btn btn-info" id="generateCitation"
+                    onclick="document.getElementById('resultatCitation').innerHTML=generateCrazZytation();">
+                    Générer une citation
+                </button>
+                <button class="btn btn-info"
+                    onclick="document.getElementById('resultatCitation').innerHTML=initialize()">
+                    Réinitialiser
                 </button>
             </div>
-
-            <button onclick="document.getElementById('resultatCitation').innerHTML=Date()">The time is?</button>
-
-
-            
-
+            <button class="btn border-info" onclick="document.getElementById('resultatCitation').innerHTML=Date()">The
+                time is ?</button>
         </div>
-        <div class="row text-center">
-            <div class="col">
-                <p id="resultatCitation">Je suis une phrase en suspension</p>
+        <div class="row text-center citationBlock">
+            <div class="col m-auto">
+                <p class="ff_second" id="resultatCitation">" Je suis une phrase en suspension... "</p>
             </div>
-
         </div>
-        
-
+        <h3 class="my-3">Axes d'amélioration</h3>
+        <p onmouseover="document.getElementById('solution1').style.visibility = 'visible'" onmouseout="document.getElementById('solution1').style.visibility = 'hidden'">Majuscules en début de phrase.</p>
+        <p id ="solution1" class="font-italic solution">La méthode toUppercase() permet de transformer une chaîne de caractères en forçant son affichage en majuscules. J'ai opté pour l'affichage en majuscule du premier élément du tableau myCitation avec myCitation[1].toUpperCase(), auquel j'ai ajouté par concaténation le reste la phrase avec la méthode substring() à partir du second élément de la chaîne de caractères.<br/>
+        Cependant, j'ai remarqué que mon toUpperCase ne ciblait pas le bon élément du tableau myCitation : dans le cas où la majuscule manque, c'est justment parce que le premier élémnt du tableau est égale à " ". Donc il faut en fait cibler le second élement du tableau soit :<br/>
+    myCitation[1].toUpppercase(). et retourné cette situation ou l'initiale avec un test if() {...}. </p> 
+        <p>Accord des singuliers et pluriels.</p>
+        <p onmouseover="document.getElementById('solution3').style.visibility = 'visible'" onmouseout="document.getElementById('solution3').style.visibility = 'hidden'">Affichage d'une nouvelle citation à chaque clic.</p>
+        <p id ="solution3" class="font-italic solution">Il m'a suffit de déplacer l'ensemble des lignes de codes qui généraient chaque bloc de façon aléatoire dans la fonction qui affiche ces blocs à chaque clic.</p>
     </div>
+
+    <div class="container my-5">
+        <h2 class="my-3 ff_main title_underline_dotted">Seconde étape</h2>
+        <h3 class="my-3">Proposition</h3>
+        <p>Afficher un nombre d'éléments en fonction d'une demande.<br />
+            Un script permet de parcourir un tableau et d'afficher le
+            nombre d'élements de ce tableau en fonction de la valeur demandée.</p>
+        <div class="row m-4">
+            <div class="col-4">
+                <form class="rounded my-3">
+                    <div>
+                        <select id="citationNumber">
+                            <option>Choisissez une valeur</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </form>
+                <div id="result" class="rounded">
+                    Vous avez demandé : <span id="res-number"></span> héros(s).
+                </div>
+                <button class="btn border-light my-3" onclick="document.innerHTML=showHeros()"> <span class="res-number"></span> Lister Heros</button>   
+            </div>
+            <div class="col-8 m-auto text-center">
+                <p id="listHero"></p>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -48,6 +95,7 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
     <script src="../js/citationGenerator.js"></script>
+    <script src="../js/getHeroNumber.js"></script>
 </body>
 
 </html>

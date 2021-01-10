@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap_css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/get_elements.css">
+</head>
+
+<body>
+  <h1 class="text-center">Ecouter des éléments</h1>
+  <div class="container">
+    <p>Avec des évenements de type "input" ou "change"</p>
+  <p>source MDN <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX" target="_blank">mouseEvent</a></p>
+</div>
+  <form class="rounded">
+    <div><input type="text" id="name" placeholder="Nom"/></div>
+    <div>
+      <select id="gender">
+        <option>Choisissez une valeur</option>
+        <option value="male">1</option>
+        <option value="female">2</option>
+        <option value="other">3</option>
+      </select>
+    </div>
+  </form>
+
+  <div id="result" class="rounded">
+    Nom : <span id="res-name"></span><br />
+    Genre : <span id="res-gender"></span><br />
+    Souris : (<span id="mouse-x"></span>, <span id="mouse-y"></span>)
+  </div>
+
+  <script type="text/javascript" src="../js/getElements.js"></script>
+</body>
+
+</html>

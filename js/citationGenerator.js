@@ -42,19 +42,34 @@ const allVerbBlocks = [verbBlock_1, verbBlock_2, verbBlock_3, verbBlock_4, verbB
 /* Regroupement des bloc de d'objets en tableau */
 const allObjectBlocks = [objectBlock_1, objectBlock_2, objectBlock_3, objectBlock_4, objectBlock_5];
 
-/* Génération d'un bloc de contextes aléatoire */
-const randomContext = allContextBlocks[Math.floor(Math.random() * allContextBlocks.length)];
-/* Génération d'un bloc de sujets aléatoire */
-const randomSubject = allSubjectBlocks[Math.floor(Math.random() * allSubjectBlocks.length)];
-/* Génération d'un bloc de verbes aléatoire */
-const randomVerb = allVerbBlocks[Math.floor(Math.random() * allVerbBlocks.length)];
-/* Génération d'un bloc d'objets' aléatoire */
-const randomObject = allObjectBlocks[Math.floor(Math.random() * allObjectBlocks.length)];
 
 
 /* Déclaration de la fonction pour afficher une citation */
- const generateCrazZytation = () => { 
-    return randomContext.content + randomSubject.content + randomVerb.content + randomObject.content; }
+const actionOnBtn = () => {
+    document.getElementById("generateCitation");
+    actionOnBtn.addEventListener("click", generateCrazZytation);
+    actionOnBtn.addEventListener("click", generateCrazZytation);
+}
+const generateCrazZytation = () => {
+    /* Génération d'un bloc de contextes aléatoire */
+    const randomContext = allContextBlocks[Math.floor(Math.random() * allContextBlocks.length)];
+    /* Génération d'un bloc de sujets aléatoire */
+    const randomSubject = allSubjectBlocks[Math.floor(Math.random() * allSubjectBlocks.length)];
+    /* Génération d'un bloc de verbes aléatoire */
+    const randomVerb = allVerbBlocks[Math.floor(Math.random() * allVerbBlocks.length)];
+    /* Génération d'un bloc d'objets' aléatoire */
+    const randomObject = allObjectBlocks[Math.floor(Math.random() * allObjectBlocks.length)];
+
+    const myCitation = randomContext.content + randomSubject.content + randomVerb.content + randomObject.content;
+    if (myCitation[0]== ' ') {
+        return '"' + myCitation[1].toUpperCase() + myCitation.substring(2) + '"';
+    }
+    else {
+        return '"' + myCitation + '"';
+    }
+}
+
+const initialize = () => { return " <br/>"; }
 
 
 

@@ -1,0 +1,16 @@
+  body {
+    background-color: rgb(231, 214, 214);
+  }
+  form, #result {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid darkgray;
+
+  }
+  
+  span {
+    margin: 10px;
+  }
+  

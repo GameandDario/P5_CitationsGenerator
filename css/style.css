@@ -1,21 +1,5 @@
 :root{
-    --color_green : #009789;
-    --color_green-dark : #144244;
-    --color_red :  #E84141;
-    --color_red-dark: #b55b47;
-    --color_grey : #777;
-    --color_grey-pale : #CECECE;
-    --color_grey-dark: #292929;
-    --color_orange-pale : #f0863c;
-    --color_dark-blue : #343a40;
-    --transparent_grey : rgba(255, 255, 255, 0.5);
-    --color_blue-dark : #354046;
-    --color_white-false : #f8f9fa;
-    --color_jaune-pale : #FCCD49;
-    --color_mint :#33552e;
-    --CardAcceuil_color-gradient1 : #bb191b6b;
-    --CardAcceuil_color-gradient2 : #1f422470;
-
+   
     --font-family_main : 'Montserrat', sans-serif;
     --font-family_second : 'courgette', 'Arial Narrow', Arial, sans-serif;
     --font-family_title : 'Bungee Shade', cursive;
@@ -25,8 +9,34 @@
 body {
     background-color: coral;
     font-family: var(--font-family_main);
+    color: white;
 }
-h1, h2, h3 {
+h1, h2 {
+    color: darkslategray;
+}
+.title_underline_dotted {
+    border-bottom: darkslategray dotted 4px;
+}
+.ff_main {
     font-family: var(--font-family_title);
 }
+ .ff_second {
+     font-family: var(--font-family_second);
+}
+.citationBlock {
+    height: 200px;
+}
+#resultatCitation {
+    font-size: 2rem;
+}
 
+button:hover {background-color: #3e8e41}
+button:active {
+  background-color: red;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#solution1, #solution3 {
+    visibility:hidden;
+    color:rgb(100, 58, 58);
+} 
