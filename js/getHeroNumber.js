@@ -1,4 +1,4 @@
-const selectNumber = document. getElementById('citationNumber');
+const selectNumber = document. getElementById('heroNumber');
 const logNumber = document.getElementById('res-number');
 
 
@@ -14,9 +14,8 @@ function updateNumberValue(e) {
 
 const heros = ["Tintin", " Milou", " Haddock", " La Castafiore" ];
 
-const showHeros = (valueinput) => {
-  console.log('valeur'+' '+valueinput);
-  console.log('valeur'+' '+value);
+const showHeros = () => {
+  console.log('valeur demandée héros'+' '+value);
   i=0;
   let text="";
   let globalText="";
