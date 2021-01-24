@@ -69,21 +69,21 @@
                     Vous avez demandé : <span id="res-citationNumber"></span> citation(s) en version<span id="finale_res-citationVersion"></span>.
                 </div>
                 <div class="d-flex col-12">
-                    <button class="btn border-light btn-info my-3 mx-auto" onclick="document.innerHTML= generateFinalCtations()">Afficher plusieurs citation(s)</button>
+                    <button class="btn btn-light btn-info my-3 mx-auto" onclick="document.innerHTML= generateFinalCitations()">Afficher plusieurs citation(s)</button>
                 </div>
                 
             <div class="col-8 m-auto text-center">
-                <p id="listFinaleCitation"></p>
+                <p class="ff_second" id="listFinaleCitation"></p>
             </div>
         </div>
 
         <div class="row m-4 p-2 bg-info rounded justify-content-center" id="secondOption">
-            <p>Vos citations ont été générées selon vos souhaits. Souhaitez-vous relancer l'opération ?</p>
+            <p class= "col-12">Vos citations ont été générées selon vos souhaits. Souhaitez-vous relancer l'opération ?</p>
             <div class="col-12 col-lg-4 text-center">
-                <button class="btn btn border-light btn-info my-3 mx-auto" onclick="document.innerHTML= generateFinalCtations()">Générer d'autres citations.</button>
+                <button class="btn btn border-light btn-info my-3 mx-auto" onclick="document.innerHTML= generateNewCitations()">Générer d'autres citations.</button>
             </div>
             <div class="col-12 col-lg-4 text-center">
-                    <button class="btn btn border-dark btn-info my-3 mx-auto" onclick="document.innerHTML = initiliaze()">Effacer les citations.</button>
+                    <button class="btn btn border-warning btn-info my-3 mx-auto" onclick="document.innerHTML = initiliaze()">Réinitialiser.</button>
                 </a>
             </div>
             <div class="col-12 col-lg-4 text-center">

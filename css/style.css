@@ -61,7 +61,7 @@ h1, h2 {
 .citationBlock {
     height: 200px;
 }
-#resultatCitation {
+#resultatCitation, #listFinaleCitation {
     font-size: 2rem;
 }
 

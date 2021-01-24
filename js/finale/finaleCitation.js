@@ -2,8 +2,8 @@ let finaleCitation;
 let severalFinaleCitations;
 
 
-const generateFinalCtations = () => {
-  //document.getElementById('secondOption').style.display = 'none';
+const generateFinalCitations = () => {
+  document.getElementById('secondOption').style.display = 'none';
   if (!message || !valueSelectCitation){ 
     console.log(' Att message' + message + 'valeur ' + valueSelectCitation);
     //severalFinaleCitations = 'Veuillez sélectionner vos options.';
@@ -74,5 +74,12 @@ const initiliaze = () => {
   document.getElementById("version_Radios1").checked = false;
   document.getElementById("version_Radios2").checked = false;
   document.getElementById("citationNumber").value= "0";
+  message = "";
+  valueSelectCitation = "";
 
+};
+
+const generateNewCitations = () => {
+  severalFinaleCitations ="";
+  generateFinalCitations();
 };
