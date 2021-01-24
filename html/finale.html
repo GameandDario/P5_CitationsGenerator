@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Générateur de citation SU final</title>
+</head>
+
+<body class="finaleBody">
+
+    <nav class="navbar smart-scroll fixed-top justify-content-center" id="navbar">
+        <h1 class="text-center m-3 ff_main w-100">Générateur de citations amusantes
+            <hr>
+        </h1>
+        <a class="nav-link active" href="index.html#Et-1">Etape 1</a>
+        <a class="nav-link" href="index.html#Et-2">Etape 2</a>
+        <a class="nav-link" href="index.html#Et-3">Etape 3</a>
+        <a class="nav-link disabled" href="#">Etape Finale</a>
+    </nav>
+
+    <main>
+
+        <div class="container my-5 py-2 bg-second rounded" id="Et-1">
+            <h2 class="my-3 ff_main title_underline_dotted">Version finale</h2>
+            <h3 class="my-3">Proposition</h3>
+            <p>
+                Proposer, à l'issue de la publication de 1 ou plusieurs citations, de relancer ou non le générateur de citation.
+            </p>
+
+            <div class="row m-4 p-2 bg-info rounded">
+                <div class="cl-12 col-md-6 p-2 form_finale rounded">
+                    <h4 class="text-center">Nombre de citation</h4>
+                    <form class="rounded my-3">
+                        <label>Sélectionnez le nombre de citation(s) désirée(s)</label>
+                        <div>
+                            <select id="citationNumber">
+                                <option value ="0" selected>Choisissez une valeur</option>
+                                <option value ="1">1</option>
+                                <option value ="2">2</option>
+                                <option value ="3">3</option>
+                                <option value ="4">4</option>
+                                <option value ="5">5</option>
+                            </select>
+                        </div>                   
+                    </form>
+                </div>
+                <div class="cl-12 col-md-6 p-2 form_finale rounded">
+                    <h4 class="text-center">Version des citations</h4>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="version_Radios" id="version_Radios1" value="version_fr">
+                        <label class="form-check-label" for="version_Radios1">
+                          Citations en français 
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="version_Radios" id="version_Radios2" value="version_eng">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Citations en anglais
+                        </label>
+                      </div>      
+                </div>
+                <div id="result" class="rounded col-12">
+                    Vous avez demandé : <span id="res-citationNumber"></span> citation(s) en version<span id="finale_res-citationVersion"></span>.
+                </div>
+                <div class="d-flex col-12">
+                    <button class="btn border-light btn-info my-3 mx-auto" onclick="document.innerHTML= generateFinalCtations()">Afficher plusieurs citation(s)</button>
+                </div>
+                
+            <div class="col-8 m-auto text-center">
+                <p id="listFinaleCitation"></p>
+            </div>
+        </div>
+
+        <div class="row m-4 p-2 bg-info rounded justify-content-center" id="secondOption">
+            <p>Vos citations ont été générées selon vos souhaits. Souhaitez-vous relancer l'opération ?</p>
+            <div class="col-12 col-lg-4 text-center">
+                <button class="btn btn border-light btn-info my-3 mx-auto" onclick="document.innerHTML= generateFinalCtations()">Générer d'autres citations.</button>
+            </div>
+            <div class="col-12 col-lg-4 text-center">
+                    <button class="btn btn border-dark btn-info my-3 mx-auto" onclick="document.innerHTML = initiliaze()">Effacer les citations.</button>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 text-center">
+                <a href="noMore.html">
+                    <button class="btn btn border-dark btn-info my-3 mx-auto">Non, je ne suis pas intéressé(e).</button>
+                </a>
+            </div>
+        </div>
+        <button onclick="topFunction()" id="myTopBtn" title="Go to top">Haut de page</button>
+
+
+
+
+    </main>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="../js/citationGeneratorClass.js"></script>
+    <script src="../js/hideNavBar_onscroll.js"></script>
+    <script src="../js/getCitationNumber.js"></script>
+    <script src="../js/goToTopButton.js"></script>
+    <script src="../js/finale/getVersion.js"></script>
+    <script src="../js/finale/finaleCitation.js"></script>
+</body>
+
+</html>

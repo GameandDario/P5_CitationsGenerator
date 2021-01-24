@@ -11,12 +11,14 @@ body {
     font-family: var(--font-family_main);
     color: white;
 }
-
 .finaleBody {
     background-color: #f4b9d5;
 }
 .form_finale:hover {
     background-color: #b178ab;
+}
+#secondOption {
+    display: none;
 }
 
 nav {
