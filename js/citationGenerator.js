@@ -10,7 +10,12 @@ const generateCrazZytation = () => {
     const randomVerb = allVerbBlocks[Math.floor(Math.random() * allVerbBlocks.length)];
     /* Génération d'un bloc d'objets' aléatoire */
     const randomObject = allObjectBlocks[Math.floor(Math.random() * allObjectBlocks.length)];
-
+    
+    /* Tests */
+    console.log("longueur Tableau " + allContextBlocks.length);
+    console.log(randomContext);
+    console.log(randomContext.content);
+    /* .content est la clé déclarée dans la classe citationBlock ; accessible dans chaque objet instance de cette classe */
     const myCitation = randomContext.content + randomSubject.content + randomVerb.content + randomObject.content;
     if (myCitation[0]== ' ') {
         return '"' + myCitation[1].toUpperCase() + myCitation.substring(2) + '"';
@@ -20,7 +25,7 @@ const generateCrazZytation = () => {
     }
 }
 
-const initialize = () => { return " <br/>"; }
+const initialize = () => { return " Citation réinitialisée<br/>"; }
 
 
 

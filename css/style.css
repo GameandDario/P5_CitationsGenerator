@@ -40,7 +40,7 @@ nav {
 a {
     color : rgb(108, 31, 35);
 }
-h1, h2 {
+h1, h2, a:hover {
     color: darkslategray;
 }
 /* main {
@@ -71,7 +71,7 @@ button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-#solution1, #solution3, #solution3_1  {
+#solution1, #solution2, #solution3, #solution3_1  {
     display: none;
     color:rgb(100, 58, 58);    
 }

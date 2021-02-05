@@ -32,8 +32,8 @@
         <p>A partir d'une instance de classe en JS, je crée plusieurs objets CitationBlocks. <br />Ces objets sont
             réunis dans un tableau pour chaque type grammatical( un tableau pour les sujets, un autre pour les verbes et
             un autre pour les compléments, etc...), lequel pourra être parcouru. <br />De chaque tableau créé, j'intégre
-            aléatoirement un élément associé aux autres éléments par concaténation, pour ainsi construire une phrase en
-            appelant la fonction generateCrazZytation() en cliquant sur le bouton "Générer une citation".</p>
+            <u>aléatoirement</u> un élément associé aux autres éléments par concaténation, pour ainsi construire une phrase en
+            <u>appelant la fonction generateCrazZytation() à chaque clic</u> du bouton "Générer une citation".</p>
         <div class="row m-4">
             <div class="col">
                 <button class="btn btn-info" id="generateCitation"
@@ -55,6 +55,7 @@
             </div>
         </div>
         <h3 class="my-3">Axes d'amélioration</h3>
+        <!-- Axe 1-->
         <p onmouseover="document.getElementById('solution1').style.display = 'block'"
             onmouseout="document.getElementById('solution1').style.display = 'none'">Majuscules en début de phrase.
         </p>
@@ -66,7 +67,12 @@
             cas où la majuscule manque, c'est justment parce que le premier élémnt du tableau est égale à " ". Donc il
             faut en fait cibler le second élement du tableau soit :<br />
             myCitation[1].toUpppercase(). et retourné cette situation ou l'initiale avec un test if() {...}. </p>
-        <p>Accord des singuliers et pluriels.</p>
+        
+        <!-- Axe 2-->
+        <p onmouseover="document.getElementById('solution2').style.display = 'block'"
+        onmouseout="document.getElementById('solution2').style.display = 'none'">Accord des singuliers et pluriels.</p>
+        <p id="solution2" class="font-italic solution">En cours...</p>
+        <!-- Axe 3-->
         <p onmouseover="document.getElementById('solution3').style.display = 'block'"
             onmouseout="document.getElementById('solution3').style.display = 'none'">Affichage d'une nouvelle
             citation à chaque clic.</p>
@@ -78,8 +84,8 @@
         <h2 class="my-3 ff_main title_underline_dotted">Seconde étape</h2>
         <h3 class="my-3">Proposition</h3>
         <p>Afficher un nombre d'éléments en fonction d'une demande.<br />
-            Un script permet de parcourir un tableau et d'afficher le
-            nombre d'élements de ce tableau en fonction de la valeur demandée.</p>
+            Un script permet de <u>parcourir un tableau</u> et d'<u>afficher le
+                nombre d'élements de ce tableau en fonction de la valeur demandée</u>.</p>
         <div class="row m-4">
             <div class="col-4">
                 <form class="rounded my-3">
@@ -181,6 +187,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
+    <script src="../js/citationGenerator.js"></script>
     <script src="../js/citationGeneratorClass.js"></script>
     <script src="../js/getHeroNumber.js"></script>
     <script src="../js/hideNavBar_onscroll.js"></script>

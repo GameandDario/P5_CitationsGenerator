@@ -25,14 +25,13 @@
     </nav>
 
     <main>
-
         <div class="container my-5 py-2 bg-second rounded" id="Et-1">
             <h2 class="my-3 ff_main title_underline_dotted">Version finale</h2>
             <h3 class="my-3">Proposition</h3>
             <p>
-                Proposer, à l'issue de la publication de 1 ou plusieurs citations, de relancer ou non le générateur de citation.
+                Proposer, à l'issue de la publication de 1 ou plusieurs citations, de relancer ou non le générateur de
+                citation.
             </p>
-
             <div class="row m-4 p-2 bg-info rounded">
                 <div class="cl-12 col-md-6 p-2 form_finale rounded">
                     <h4 class="text-center">Nombre de citation</h4>
@@ -40,67 +39,66 @@
                         <label>Sélectionnez le nombre de citation(s) désirée(s)</label>
                         <div>
                             <select id="citationNumber">
-                                <option value ="0" selected>Choisissez une valeur</option>
-                                <option value ="1">1</option>
-                                <option value ="2">2</option>
-                                <option value ="3">3</option>
-                                <option value ="4">4</option>
-                                <option value ="5">5</option>
+                                <option value="0" selected>Choisissez une valeur</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
                             </select>
-                        </div>                   
+                        </div>
                     </form>
                 </div>
                 <div class="cl-12 col-md-6 p-2 form_finale rounded">
                     <h4 class="text-center">Version des citations</h4>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="version_Radios" id="version_Radios1" value="version_fr">
+                        <input class="form-check-input" type="radio" name="version_Radios" id="version_Radios1"
+                            value="version_fr">
                         <label class="form-check-label" for="version_Radios1">
-                          Citations en français 
+                            Citations en français
                         </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="version_Radios" id="version_Radios2" value="version_eng">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="version_Radios" id="version_Radios2"
+                            value="version_eng">
                         <label class="form-check-label" for="exampleRadios2">
                             Citations en anglais
                         </label>
-                      </div>      
+                    </div>
                 </div>
                 <div id="result" class="rounded col-12">
-                    Vous avez demandé : <span id="res-citationNumber"></span> citation(s) en version<span id="finale_res-citationVersion"></span>.
+                    Vous avez demandé : <span id="res-citationNumber"></span> citation(s) en version<span
+                        id="finale_res-citationVersion"></span>.
                 </div>
                 <div class="d-flex col-12">
-                    <button class="btn btn-light btn-info my-3 mx-auto" onclick="document.innerHTML= generateFinalCitations()">Afficher plusieurs citation(s)</button>
+                    <button class="btn btn-light btn-info my-3 mx-auto"
+                        onclick="document.innerHTML= generateFinalCitations()">Afficher plusieurs citation(s)</button>
                 </div>
-                
-            <div class="col-8 m-auto text-center">
-                <p class="ff_second" id="listFinaleCitation"></p>
+                <div class="col-8 m-auto text-center">
+                    <p class="ff_second" id="listFinaleCitation"></p>
+                </div>
             </div>
-        </div>
-
-        <div class="row m-4 p-2 bg-info rounded justify-content-center" id="secondOption">
-            <p class= "col-12">Vos citations ont été générées selon vos souhaits. Souhaitez-vous relancer l'opération ?</p>
-            <div class="col-12 col-lg-4 text-center">
-                <button class="btn btn border-light btn-info my-3 mx-auto" onclick="document.innerHTML= generateNewCitations()">Générer d'autres citations.</button>
+            <div class="row m-4 p-2 bg-info rounded justify-content-center" id="secondOption">
+                <p class="col-12">Vos citations ont été générées selon vos souhaits. Souhaitez-vous relancer l'opération
+                    ?</p>
+                <div class="col-12 col-lg-4 text-center">
+                    <button class="btn btn border-light btn-info my-3 mx-auto"
+                        onclick="document.innerHTML= generateNewCitations()">Générer d'autres citations.</button>
+                </div>
+                <div class="col-12 col-lg-4 text-center">
+                    <button class="btn btn border-warning btn-info my-3 mx-auto"
+                        onclick="document.innerHTML = initiliaze()">Réinitialiser.</button>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 text-center">
+                    <a href="noMore.html">
+                        <button class="btn btn border-dark btn-info my-3 mx-auto">Non, je ne suis pas
+                            intéressé(e).</button>
+                    </a>
+                </div>
             </div>
-            <div class="col-12 col-lg-4 text-center">
-                    <button class="btn btn border-warning btn-info my-3 mx-auto" onclick="document.innerHTML = initiliaze()">Réinitialiser.</button>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 text-center">
-                <a href="noMore.html">
-                    <button class="btn btn border-dark btn-info my-3 mx-auto">Non, je ne suis pas intéressé(e).</button>
-                </a>
-            </div>
-        </div>
-        <button onclick="topFunction()" id="myTopBtn" title="Go to top">Haut de page</button>
-
-
-
-
+            <button onclick="topFunction()" id="myTopBtn" title="Go to top">Haut de page</button>
     </main>
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

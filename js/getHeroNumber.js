@@ -12,7 +12,7 @@ function updateNumberValue(e) {
   return value; 
 };
 
-const heros = ["Tintin", " Milou", " Haddock", " La Castafiore" ];
+const heros = ["Tintin", " Milou", " Haddock", " La Castafiore", " Dupond" ];
 
 const showHeros = () => {
   console.log('valeur demandée héros'+' '+value);

@@ -12,6 +12,7 @@ const contextBlock_2 = new CitationBlock("En avril, ", false);
 const contextBlock_3 = new CitationBlock("A Paris, ", false);
 const contextBlock_4 = new CitationBlock("Quand la lune est rousse, ", false);
 const contextBlock_5 = new CitationBlock(" ", false);
+const contextBlock_6 = new CitationBlock("Comme chaque vendredi, ", false);
 
 /* Création bloc de sujet */
 const subjectBlock_1 = new CitationBlock("Marie ", false);
@@ -35,7 +36,7 @@ const objectBlock_4 = new CitationBlock("un nouveau chef d'œuvre.", false);
 const objectBlock_5 = new CitationBlock("Robert Palmer.", true);
 
 /* Regroupement des bloc de contextes en tableau */
-const allContextBlocks = [contextBlock_1, contextBlock_2, contextBlock_3, contextBlock_4, contextBlock_5];
+const allContextBlocks = [contextBlock_1, contextBlock_2, contextBlock_3, contextBlock_4, contextBlock_5, contextBlock_6];
 /* Regroupement des bloc de sujets en tableau */
 const allSubjectBlocks = [subjectBlock_1, subjectBlock_2, subjectBlock_3, subjectBlock_4, subjectBlock_5];
 /* Regroupement des bloc de verbes en tableau */
